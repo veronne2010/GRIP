@@ -1,0 +1,7 @@
+site_name: GRIP - Gestionale Report Informazioni Pazienti
+docs_dir: docs
+site_dir: site
+theme:
+  name: material
+nav:
+  - Home: index.md
