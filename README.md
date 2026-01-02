@@ -15,32 +15,44 @@ Inoltre, lo sviluppo di questo progetto ha sfruttato il framework sviluppato dai
 
 ## Installare il GRIP
 
-Per installare il GRIP è sufficente eseguire pochi comandi, riportati in modo completo nella documentazione.
-'''bash
+Per installare il software **GRIP** è sufficiente eseguire pochi comandi, riportati di seguito in modo completo.
+
+```bash
 git clone https://github.com/veronne2010/GRIP.git
-'''
-'''bash
+```
+
+```bash
 cd /var/www/html/ && rm -r * && cd ~
-'''
-'''bash
+```
+
+```bash
 cd GRIP
-'''
-'''bash
-su && cp -r * /var/www/html/
-'''
-'''bash
+```
+
+```bash
+su
+cp -r * /var/www/html/
+```
+
+```bash
 cd /var/www/html/
-'''
-'''bash
+```
+
+```bash
 nano config.php
 nano ente.php
-'''
-in questi file bisogna modificare i dati del database e nel file "ente.php" bisogna inserire tutti i dati dell'ente.
-a questo punto per sicurezza si eseguirà il comando 
-'''bash
+```
+
+All’interno di questi file è necessario modificare i **dati di connessione al database**; in particolare, nel file `ente.php` devono essere inseriti **tutti i dati dell’ente**.
+
+Per sicurezza, al termine della configurazione, eseguire il comando:
+
+```bash
 systemctl restart apache2
-'''
-per assicurarsi che il server avvii correttamente tutte le funzioni.
+```
+
+Questo permette di assicurarsi che il server Apache venga riavviato correttamente e che tutte le funzionalità risultino operative.
+
 
 ### Note sull'installazione
 Tramite script sarà necessario importare tutte le tabelle MariaDB o MySQL.
