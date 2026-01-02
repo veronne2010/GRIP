@@ -1,60 +1,107 @@
-# GRIP
-Gestionale Report Informazioni Pazienti
+# GRIP – Gestionale Report Informazioni Pazienti
 
-## Cosa è GRIP
-GRIP, *Gestionale Report Informazioni Pazienti*, è un nuovo modo di pensare l'aggiornamento delle Cartelle Cliniche Psicologiche per pazienti in cura in strutture per il trattamento della *tossico-dipendenza*.
+**GRIP (Gestionale Report Informazioni Pazienti)** è un software gestionale web per la gestione delle cartelle cliniche psicologiche e la produzione di report clinici strutturati.
+
+È pensato per strutture sanitarie e socio-assistenziali, in particolare per contesti di trattamento delle tossico-dipendenze, dove è fondamentale avere dati ordinati, consultabili e facilmente stampabili.
+
+---
+
+## Cos’è GRIP
+
+GRIP è un **gestionale clinico web** sviluppato in PHP, progettato per supportare psicologi e operatori sanitari nella **raccolta, gestione e consultazione delle informazioni sui pazienti**.
+
+Il sistema consente di:
+
+* gestire cartelle cliniche psicologiche
+* organizzare informazioni sanitarie in modo strutturato
+* generare report clinici stampabili
+* centralizzare i dati dei pazienti in un’unica piattaforma
+
+---
 
 ## Perché GRIP
-G.R.I.P. è un'acronimo studiato per infondere sicurezza nella mente di chi lo legge per via del suo significato.
-Quante volte nella vita ci è capitato di sentire della *cover con il grip* ad esempio per un joystick o per il telefono, GRIP ci stampa nella mente una immagine di qualcosa che resiste e su cui affidarsi perché ci aiuta.
-L'acronimo *GRIP* descrive correttamente anche le funzioni del software stesso per le sue innate caratteristiche, **è un software gestionale** da qui *Gestionale*, raccoglie informazioni sui pazienti dallo psicologo e ne permette la stampa  *Report Informazioni*, lavora con i pazienti *Pazienti*.
 
-## Il GRIP
-Insomma, questo software non sarà la quintessenza dei software simili, già solo perché è stato sviluppato a tempo perso in poco più di 2 mesi, seguendo una roadmap tediosa e complicata. Passando da una versione in C# a una in Java a quella definitiva WEB con PHP.
-Inoltre, lo sviluppo di questo progetto ha sfruttato il framework sviluppato dai team Developers Italia e Designers Italia che con sinergia danno vita a [@italia](https://github.com/italia) un profilo GitHub mantenuto dagli stessi.
+Il nome **GRIP** è stato scelto per trasmettere affidabilità, controllo e solidità: caratteristiche fondamentali per un software che gestisce informazioni cliniche sensibili.
 
-## Installare il GRIP
+L’acronimo descrive chiaramente lo scopo del progetto:
 
-Per installare il software **GRIP** è sufficiente eseguire pochi comandi, riportati di seguito in modo completo.
+* Gestionale
+* Report
+* Informazioni
+* Pazienti
+
+GRIP permette agli operatori di inserire, aggiornare e consultare i dati clinici dei pazienti, trasformandoli in **report chiari e facilmente consultabili**, utili sia per il lavoro quotidiano sia per la documentazione clinica.
+
+---
+
+## Descrizione del progetto
+
+GRIP non nasce come prodotto enterprise, ma come progetto concreto sviluppato per rispondere a esigenze reali.
+
+È stato realizzato **nel tempo libero**, in circa due mesi, seguendo una roadmap complessa e in continua evoluzione.
+
+Nel corso dello sviluppo sono state esplorate diverse tecnologie:
+
+* una prima versione in C#
+* una successiva versione in Java
+* la versione finale web sviluppata in PHP
+
+L’interfaccia utilizza il framework sviluppato dai team **Developers Italia** e **Designers Italia**, mantenuto sul profilo GitHub ufficiale **@italia**, garantendo coerenza con le linee guida di design della Pubblica Amministrazione.
+
+---
+
+## Installazione
+
+Per installare GRIP su un server web Linux con Apache è sufficiente eseguire i seguenti comandi:
 
 ```bash
 git clone https://github.com/veronne2010/GRIP.git
-```
-
-```bash
 cd /var/www/html/ && rm -r * && cd ~
-```
-
-```bash
 cd GRIP
-```
-
-```bash
 su
 cp -r * /var/www/html/
-```
-
-```bash
 cd /var/www/html/
-```
-
-```bash
 nano config.php
 nano ente.php
 ```
 
-All’interno di questi file è necessario modificare i **dati di connessione al database**; in particolare, nel file `ente.php` devono essere inseriti **tutti i dati dell’ente**.
+Nei file `config.php` ed `ente.php` devono essere configurati:
 
-Per sicurezza, al termine della configurazione, eseguire il comando:
+* i parametri di connessione al database MariaDB o MySQL
+* i dati identificativi dell’ente (obbligatori nel file `ente.php`)
+
+Al termine della configurazione è consigliato riavviare Apache:
 
 ```bash
 systemctl restart apache2
 ```
 
-Questo permette di assicurarsi che il server Apache venga riavviato correttamente e che tutte le funzionalità risultino operative.
+---
 
+## Database
 
-### Note sull'installazione
-Tramite script sarà necessario importare tutte le tabelle MariaDB o MySQL.
+Le tabelle del database **MariaDB / MySQL** devono essere importate manualmente tramite script.
 
-Si ricorda che, a differenza di un qualunque software gestionale, questo non dispone di un'installer, per via del fatto che è stato progettato e costruito velocemente implementando le funzioni base. Sarà possibile, a mezzo ISSUE, proporre funzionalità tramite il tag *Proposte*.
+GRIP non dispone di un installer automatico, poiché è stato progettato e sviluppato rapidamente concentrandosi sulle funzionalità principali di gestione dei pazienti e dei report clinici.
+
+---
+
+## Contributi e proposte
+
+Il progetto è aperto a contributi e miglioramenti.
+
+È possibile:
+
+* segnalare bug
+* proporre nuove funzionalità
+* suggerire miglioramenti tecnici o funzionali
+
+aprendo una **Issue** su GitHub e utilizzando il tag **`Proposte`**.
+
+---
+
+## Stato del progetto
+
+GRIP è un progetto attivo e in continua evoluzione.
+
+Feedback, segnalazioni e contributi sono ben accetti per migliorare il software e ampliarne le funzionalità.
