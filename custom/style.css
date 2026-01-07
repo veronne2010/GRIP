@@ -1,0 +1,14 @@
+.toolbar-vertical {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 80px;
+    overflow: hidden; /* Cambiato da overflow-y: auto */
+    z-index: 1000;
+}
+
+.main-content {
+  margin-left: 88px;
+  padding: 2rem;
+}
