@@ -44,15 +44,17 @@ Nel corso dello sviluppo sono state esplorate diverse tecnologie:
 
 * una prima versione in C#
 * una successiva versione in Java
-* la versione finale web sviluppata in PHP
+* una successiva versione web sviluppata in PHP
+* una successiva versione in Python
 
-L’interfaccia utilizza il framework sviluppato dai team **Developers Italia** e **Designers Italia**, mantenuto sul profilo GitHub ufficiale **@italia**, garantendo coerenza con le linee guida di design della Pubblica Amministrazione.
+L’interfaccia della versione in PHP (vd. branch 'PHP') utilizza il framework sviluppato dai team **Developers Italia** e **Designers Italia**, mantenuto sul profilo GitHub ufficiale **@italia**, garantendo coerenza con le linee guida di design della Pubblica Amministrazione.
+L'interfaccia invece della versione Python è realizzata con PyQt/Pyside garantendo una interfaccia semplice e moderna
 
 ---
 
 ## Installazione
 
-Per installare GRIP su un server web Linux con Apache è sufficiente eseguire i seguenti comandi:
+Per installare GRIP PHP su un server web Linux con Apache è sufficiente eseguire i seguenti comandi:
 
 ```bash
 git clone https://github.com/veronne2010/GRIP.git
@@ -75,14 +77,7 @@ Al termine della configurazione è consigliato riavviare Apache:
 ```bash
 systemctl restart apache2
 ```
-
----
-
-## Database
-
-Le tabelle del database **MariaDB / MySQL** devono essere importate manualmente tramite script.
-
-GRIP non dispone di un installer automatico, poiché è stato progettato e sviluppato rapidamente concentrandosi sulle funzionalità principali di gestione dei pazienti e dei report clinici.
+Al momento purtroppo non sono inclusi gli script per l'installazione del database.
 
 ---
 
